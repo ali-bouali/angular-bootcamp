@@ -1,0 +1,10 @@
+<div
+  (click)="incrementCounter()"
+  (mouseenter)="eventName='mouse enter'"
+  (mouseleave)="eventName='mouse leave'"
+   class="btn"
+>
+  {{label + " " + counter }}
+</div>
+
+<div>Event name: {{eventName}}</div>

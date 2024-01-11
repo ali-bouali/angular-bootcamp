@@ -1,8 +1,5 @@
 <h1>Hello</h1>
 <app-user-info
   [label]="'Hello'"
-></app-user-info>
-<hr>
-<app-user-info
-  [label]="'Bye'"
+  (myClickEvent)="displayClickNumber($event)"
 ></app-user-info>

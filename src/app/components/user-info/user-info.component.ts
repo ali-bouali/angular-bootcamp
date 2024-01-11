@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-user-info',
@@ -9,12 +9,16 @@ export class UserInfoComponent {
   // fieldName: Type [ = InitValue];
   @Input()
   label: string = '';
-  counter: number = 0;
+  private counter: number = 0;
   eventName: string = '';
+
+  @Output()
+  myClickEvent: EventEmitter<number> = new EventEmitter<number>();
 
 
   incrementCounter(): void {
-    this.eventName = 'click';
+    this.eventName = 'Click';
     this.counter++;
+    this.myClickEvent.emit(this.counter);
   }
 }

@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test-with-backend": "echo 'Running tests with backend'",
-    "custom": "echo 'Hello Alibou'"
+    "custom": "echo 'Hello Alibou '"
   },
   "private": true,
   "dependencies": {

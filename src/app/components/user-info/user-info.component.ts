@@ -8,21 +8,14 @@ import {NewUserInfo} from '../../model/new-user-info';
   styleUrls: ['./user-info.component.scss']
 })
 export class UserInfoComponent {
-  firstName = '';
-  lastName = '';
-  age = 0;
+  userInfo: NewUserInfo = {address: {}};
 
   @Output()
   save: EventEmitter<NewUserInfo> = new EventEmitter<NewUserInfo>();
 
 
   onSave() {
-    const userInfo: NewUserInfo = {
-      firstname: this.firstName,
-      lastname: this.lastName,
-      age: this.age
-    };
-    this.save.emit(userInfo);
+    this.save.emit(this.userInfo);
   }
 }
 

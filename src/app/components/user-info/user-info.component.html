@@ -1,21 +1,35 @@
 <h3>User info comp</h3>
 <div>
   <input
-    [(ngModel)]="firstName"
+    [(ngModel)]="userInfo.firstname"
     type="text"
     placeholder="First name"
   >
   <input
-    [(ngModel)]="lastName"
+    [(ngModel)]="userInfo.lastname"
     type="text"
     placeholder="Last name"
   >
   <input
-    [(ngModel)]="age"
+    [(ngModel)]="userInfo.age"
     type="text"
     placeholder="Age"
   >
 </div>
+<h3>User address</h3>
+<div>
+  <input
+    [(ngModel)]="userInfo.address.street"
+    type="text"
+    placeholder="Street"
+  >
+  <input
+    [(ngModel)]="userInfo.address.houseNumber"
+    type="text"
+    placeholder="House number"
+  >
+</div>
+<br>
 <div>
   <button (click)="onSave()">Save</button>
   <button>Cancel</button>

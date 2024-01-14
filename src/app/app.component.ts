@@ -8,7 +8,7 @@ import {NewUserInfo} from './model/new-user-info';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  userInfo: NewUserInfo = {};
+  userInfo: NewUserInfo = {address: {}};
   displayClickNumber(event: number) {
     console.log('click number', event);
   }

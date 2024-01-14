@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {AfterContentInit, AfterViewInit, Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {UserInfo} from '../../model/user-info';
 import {NewUserInfo} from '../../model/new-user-info';
 
@@ -7,8 +7,12 @@ import {NewUserInfo} from '../../model/new-user-info';
   templateUrl: './user-info.component.html',
   styleUrls: ['./user-info.component.scss']
 })
-export class UserInfoComponent {
+export class UserInfoComponent implements OnInit, AfterViewInit, AfterContentInit {
   userInfo: NewUserInfo = {address: {}};
+
+  constructor() {
+    console.log('inside conctructor');
+  }
 
   @Output()
   save: EventEmitter<NewUserInfo> = new EventEmitter<NewUserInfo>();
@@ -16,6 +20,18 @@ export class UserInfoComponent {
 
   onSave() {
     this.save.emit(this.userInfo);
+  }
+
+  ngOnInit(): void {
+    console.log('inside on init');
+  }
+
+  ngAfterViewInit(): void {
+    console.log('inside on after view init');
+  }
+
+  ngAfterContentInit(): void {
+    console.log('inside after content init');
   }
 }
 

@@ -1,0 +1,22 @@
+<h3>User info comp</h3>
+<div>
+  <input
+    [(ngModel)]="firstName"
+    type="text"
+    placeholder="First name"
+  >
+  <input
+    [(ngModel)]="lastName"
+    type="text"
+    placeholder="Last name"
+  >
+  <input
+    [(ngModel)]="age"
+    type="text"
+    placeholder="Age"
+  >
+</div>
+<div>
+  <button (click)="onSave()">Save</button>
+  <button>Cancel</button>
+</div>

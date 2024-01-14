@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserInfoComponent } from './components/user-info/user-info.component';
+import { CustomButtonComponent } from './components/custom-button/custom-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserInfoComponent
+    CustomButtonComponent
   ],
   imports: [
     BrowserModule,

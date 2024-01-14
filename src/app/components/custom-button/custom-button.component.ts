@@ -1,17 +1,17 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-user-info',
-  templateUrl: "user-info.component.html",
-  styleUrls: ['./user-info.component.scss', '../../my-styles/my-style.scss']
+  selector: 'app-custom-button',
+  templateUrl: "custom-button.component.html",
+  styleUrls: ['./custom-button.component.scss', '../../my-styles/my-style.scss']
 })
-export class UserInfoComponent {
+export class CustomButtonComponent {
   // fieldName: Type [ = InitValue];
   @Input()
   label: string = '';
   private counter: number = 0;
   eventName: string = '';
-
+  // Dummy Component
   @Output()
   myClickEvent: EventEmitter<number> = new EventEmitter<number>();
 

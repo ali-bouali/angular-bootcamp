@@ -19,7 +19,6 @@
 <h3>User address</h3>
 <div>
   <input
-    id="fname"
     [(ngModel)]="userInfo.address.street"
     type="text"
     placeholder="Street"
@@ -28,6 +27,12 @@
     [(ngModel)]="userInfo.address.houseNumber"
     type="text"
     placeholder="House number"
+  >
+  <input
+    *ngIf="isUsa"
+    [(ngModel)]="userInfo.address.districtName"
+    type="text"
+    placeholder="District name"
   >
 </div>
 <br>

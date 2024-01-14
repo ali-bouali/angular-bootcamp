@@ -1,4 +1,4 @@
-import {AfterContentInit, AfterViewInit, Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {AfterContentInit, AfterViewInit, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {UserInfo} from '../../model/user-info';
 import {NewUserInfo} from '../../model/new-user-info';
 
@@ -8,6 +8,8 @@ import {NewUserInfo} from '../../model/new-user-info';
   styleUrls: ['./user-info.component.scss']
 })
 export class UserInfoComponent implements OnInit, AfterViewInit, AfterContentInit {
+  @Input()
+  isUsa: boolean = false;
   userInfo: NewUserInfo = {address: {}};
 
   constructor() {

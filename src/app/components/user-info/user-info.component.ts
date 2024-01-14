@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {UserInfo} from '../../model/user-info';
+import {NewUserInfo} from '../../model/new-user-info';
 
 @Component({
   selector: 'app-user-info',
@@ -12,15 +13,15 @@ export class UserInfoComponent {
   age = 0;
 
   @Output()
-  save: EventEmitter<UserInfo> = new EventEmitter<UserInfo>();
+  save: EventEmitter<NewUserInfo> = new EventEmitter<NewUserInfo>();
 
 
   onSave() {
-    const userInfo = new UserInfo(
-      this.firstName,
-      this.lastName,
-      this.age
-    );
+    const userInfo: NewUserInfo = {
+      firstname: this.firstName,
+      lastname: this.lastName,
+      age: this.age
+    };
     this.save.emit(userInfo);
   }
 }

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {UserInfo} from './model/user-info';
+import {NewUserInfo} from './model/new-user-info';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,12 @@ import {UserInfo} from './model/user-info';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  userInfo: UserInfo = new UserInfo('', '', 0);
+  userInfo: NewUserInfo = {};
   displayClickNumber(event: number) {
     console.log('click number', event);
   }
 
-  displayUserInfo(userInfo: UserInfo) {
+  displayUserInfo(userInfo: NewUserInfo) {
     console.log(userInfo);
     this.userInfo = userInfo;
   }

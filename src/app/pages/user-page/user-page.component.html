@@ -1,0 +1,12 @@
+<app-user-info
+  [isUsa]="true"
+  (save)="displayUserInfo($event)"
+></app-user-info>
+<hr>
+<h3>Inside parent comp</h3>
+<p>First name: {{userInfo.firstname}}</p>
+<p>Last name: {{userInfo.lastname}}</p>
+<p>Age: {{userInfo.age}}</p>
+<hr>
+<p>Street: {{userInfo.address?.street}}</p>
+<p>House number: {{userInfo.address?.houseNumber}}</p>

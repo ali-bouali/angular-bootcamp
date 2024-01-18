@@ -6,3 +6,27 @@ div .my-class {
     background-color: green;
   }
 }
+
+div.menu {
+  // padding: 20px;
+  background-color: aliceblue;
+  display: flex;
+  gap: 10px;
+  > a {
+    text-decoration: none;
+    padding: 10px;
+    &:hover {
+      background-color: cornflowerblue;
+      color: white;
+      border-radius: 5px;
+    }
+  }
+}
+
+.main-container {
+  margin-top: 10px;
+  padding: 10px;
+  border: solid 1px gray;
+  border-radius: 5px;
+}
+

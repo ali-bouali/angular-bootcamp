@@ -14,6 +14,6 @@ export class MenuComponent {
 
   calculateAndRedirect() {
     console.log('calculating...');
-    this.router.navigate(['services']);
+    this.router.navigate(['services', 'dev']);
   }
 }

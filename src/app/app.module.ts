@@ -12,6 +12,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ServiceComponent } from './pages/service/service.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DevelopmentComponent } from './pages/service/sub-services/development/development.component';
+import { MobileDevComponent } from './pages/service/sub-services/mobile-dev/mobile-dev.component';
+import { VideoEditingComponent } from './pages/service/sub-services/video-editing/video-editing.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     HomeComponent,
     AboutUsComponent,
     ServiceComponent,
-    DashboardComponent
+    DashboardComponent,
+    DevelopmentComponent,
+    MobileDevComponent,
+    VideoEditingComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

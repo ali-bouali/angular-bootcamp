@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NewUserInfo} from '../../model/new-user-info';
+import {NewUserInfo} from '../../../../model/new-user-info';
 
 @Component({
   selector: 'app-user-page',
